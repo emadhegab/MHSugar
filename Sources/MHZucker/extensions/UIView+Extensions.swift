@@ -15,7 +15,7 @@ extension UIView {
         animation.toValue = toValue
         animation.duration = duration
         animation.isRemovedOnCompletion = false
-        animation.fillMode = CAMediaTimingFillMode.forwards
+        animation.fillMode = kCAFillModeForwards
         self.layer.add(animation, forKey: nil)
     }
 
