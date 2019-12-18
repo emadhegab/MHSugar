@@ -6,7 +6,7 @@
 
 import UIKit
 
-extension UILabel {
+public extension UILabel {
     func setTextSpacing(spacing: CGFloat) {
         let attributedString = NSMutableAttributedString(string: text!)
         if textAlignment == .center || textAlignment == .right {

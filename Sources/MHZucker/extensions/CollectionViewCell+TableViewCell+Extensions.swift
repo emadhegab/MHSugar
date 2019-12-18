@@ -6,25 +6,25 @@
 
 import UIKit
 
-extension UICollectionViewCell {
+public extension UICollectionViewCell {
     static var reuseId: String {
         return String(describing: self)
     }
 }
 
-extension UITableViewCell {
+public extension UITableViewCell {
+   static var reuseId: String {
+        return String(describing: self)
+    }
+}
+
+public extension UITableViewHeaderFooterView {
     static var reuseId: String {
         return String(describing: self)
     }
 }
 
-extension UITableViewHeaderFooterView {
-    static var reuseId: String {
-        return String(describing: self)
-    }
-}
-
-extension UICollectionView {
+public extension UICollectionView {
 
     func register(cell: UICollectionViewCell.Type) {
         register(UINib(nibName: String(describing: cell), bundle: nil), forCellWithReuseIdentifier: cell.reuseId)
@@ -37,7 +37,7 @@ extension UICollectionView {
     }
 }
 
-extension UITableView {
+public extension UITableView {
 
     func register(cell: UITableViewCell.Type) {
         register(UINib(nibName: String(describing: cell), bundle: nil), forCellReuseIdentifier: cell.reuseId)

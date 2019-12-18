@@ -6,9 +6,9 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
 
-    var shortDate: String {
+   var shortDate: String {
         // eg: Oct 23, 2017
         return shortDateFormatter.string(from: self)
     }

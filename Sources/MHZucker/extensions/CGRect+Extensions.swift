@@ -6,7 +6,7 @@
 
 import CoreGraphics
 
-extension CGRect {
+public extension CGRect {
     var roundedCornerRadius: CGFloat {
         return min(height, width) / 2
     }

@@ -6,7 +6,7 @@
 
 import Foundation
 
-extension Locale {
+public extension Locale {
 
     static func countryName(from countryCode: String) -> String {
         guard !countryCode.isEmpty else { return "Country Undefined" }
@@ -20,7 +20,7 @@ extension Locale {
         return locale.displayName(forKey: NSLocale.Key.currencyCode, value: currencyCode)!
     }
 
-    static func currencySymbol(from currencyCode: String) -> String {
+   static func currencySymbol(from currencyCode: String) -> String {
         guard !currencyCode.isEmpty else { return "Currency Undefined" }
         let locale = Locale.current as NSLocale
         return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: currencyCode)!
